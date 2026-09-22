@@ -1,0 +1,27 @@
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  padding: 24px 16px;
+  border-right: 1px solid var(--color-border);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+}
+
+.sidebar__item:hover,
+.sidebar__item--active {
+  background: var(--color-surface);
+  color: var(--color-text);
+}

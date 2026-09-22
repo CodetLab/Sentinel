@@ -1,0 +1,76 @@
+.vault {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vault__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.vault__header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.vault__header p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.vault__add-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  font-weight: 600;
+}
+
+.vault__search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+}
+
+.vault__search input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-text);
+}
+
+.vault__section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.vault__section-header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.vault__section-header span {
+  color: var(--color-text-muted);
+}
+
+.vault__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}

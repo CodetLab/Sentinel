@@ -1,0 +1,49 @@
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-layout__body {
+  display: flex;
+  min-height: calc(100vh - 64px);
+}
+
+.app-layout__content {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+}
+
+@media (max-width: 700px) {
+  .app-layout__body {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .app-layout__content {
+    padding: 20px 16px;
+  }
+
+  .app-header {
+    padding: 0 16px;
+  }
+
+  .app-header__actions span {
+    display: none;
+  }
+
+  .vault__header {
+    flex-direction: column;
+  }
+
+  .vault__add-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .vault__grid {
+    grid-template-columns: 1fr;
+  }
+}
