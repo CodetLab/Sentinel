@@ -1,6 +1,8 @@
 import { Plus, Search } from "lucide-react";
 import CredentialCard from "../../components/CredentialCard/CredentialCard";
 import "./Vault.css";
+import SessionManager from "../../components/account/sessions/SessionManager";
+import { useAuth } from "../../hooks/useAuth";
 
 const credentials = [
   {
@@ -16,6 +18,11 @@ const credentials = [
 ];
 
 export default function Vault() {
+
+    const {
+    logout
+  } = useAuth();
+  
   return (
     <div className="vault">
       <div className="vault__header">
@@ -55,6 +62,14 @@ export default function Vault() {
             />
           ))}
         </div>
+      </section>
+      <section className="vault__section">
+        <div className="vault__section-header">
+          <h2>Active sessions</h2>
+        </div>
+        <SessionManager 
+                  onLogout={logout}
+                  />
       </section>
     </div>
   );

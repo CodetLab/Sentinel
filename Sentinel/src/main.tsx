@@ -1,12 +1,19 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import { AuthProvider } from "./context/AuthContext";
+import ReactDOM from "react-dom/client";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+import App from "./App";
+
+import { AuthProvider } from "./providers/AuthProvider";
+import { NotificationProvider } from "./providers/NotificationProvider";
+
+import "./styles/globals.css";
+import "./styles/variables.css";
+
+ReactDOM.createRoot(
+  document.getElementById("root")!
+).render(
+  <NotificationProvider>
     <AuthProvider>
       <App />
     </AuthProvider>
-  </StrictMode>
+  </NotificationProvider>
 );
